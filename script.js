@@ -167,7 +167,8 @@ function createDrop() {
 }
 
 function createCelebration() {
-  for (var i = 0; i < 12; i++) {
+  // Create a simple confetti effect when the player wins.
+  for (var i = 0; i < 18; i++) {
     var confetti = document.createElement("div");
     confetti.className = "confetti";
     confetti.style.left = Math.random() * (gameContainer.offsetWidth - 10) + "px";
@@ -176,10 +177,11 @@ function createCelebration() {
     confetti.style.setProperty("--confetti-x", (Math.random() * 120 - 60) + "px");
     gameContainer.appendChild(confetti);
 
+    // Remove each confetti piece after 4 seconds so the effect lasts 3-5 seconds.
     (function(piece) {
       setTimeout(function() {
         piece.remove();
-      }, 1400);
+      }, 4000);
     })(confetti);
   }
 }

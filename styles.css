@@ -159,7 +159,7 @@ body {
     height: 10px;
     border-radius: 50%;
     opacity: 0;
-    animation: confettiRise 1.2s ease-out forwards;
+    animation: confettiRise 4s ease-out forwards;
 }
 
 .game-title {
